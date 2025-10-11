@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import org.apache.calcite.model.JsonType;
 
 @Entity
-@Table(name = "wallet")
+@Table(name = "saga_step")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
