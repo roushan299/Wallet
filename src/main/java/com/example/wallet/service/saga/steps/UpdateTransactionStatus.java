@@ -1,4 +1,4 @@
-package com.example.wallet.service.steps;
+package com.example.wallet.service.saga.steps;
 
 import com.example.wallet.entity.Transaction;
 import com.example.wallet.enums.TransactionStatus;

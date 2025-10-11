@@ -1,4 +1,4 @@
-package com.example.wallet.service.steps;
+package com.example.wallet.service.saga.steps;
 
 import com.example.wallet.entity.Wallet;
 import com.example.wallet.repository.WalletRepository;
