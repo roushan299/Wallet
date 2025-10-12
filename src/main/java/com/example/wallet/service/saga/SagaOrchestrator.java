@@ -16,4 +16,6 @@ public interface SagaOrchestrator {
 
     void failSaga(Long sagaInstanceId);
 
+    void completeSaga(Long sagaInstanceId);
+
 }
