@@ -56,4 +56,11 @@ public class TransactionService {
         return transactionRepository.findByStatus(status);
     }
 
+    public void updateTransactionWithSagaInstanceId(Long transactionId, Long sagaInstanceId) {
+        Transaction transaction = transactionRepository.findById(transactionId).orElseThrow(() ->new RuntimeException("Transaction not found"));
+        transaction.setSagaInstanceId(sagaInstanceId);
+        transactionRepository.save(transaction);
+        log.info("Transaction updated with saga instance id {}", sagaInstanceId);
+    }
+
 }

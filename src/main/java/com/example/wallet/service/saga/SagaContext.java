@@ -1,12 +1,14 @@
 package com.example.wallet.service.saga;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import java.math.BigDecimal;
 import java.util.*;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+@RequiredArgsConstructor
+@Builder
 public class SagaContext {
 
     private Map<String, Object> data;
