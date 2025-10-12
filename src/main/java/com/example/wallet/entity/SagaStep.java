@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import org.apache.calcite.model.JsonType;
 
 @Entity
-@Table(name = "saga_step")
+@Table(name = "saga_steps")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,6 +27,7 @@ public class SagaStep {
     @Column(name = "step_name", nullable = false)
     private String stepName;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
     private StepStatus status;
 

@@ -1,6 +1,6 @@
 package com.example.wallet.service.saga;
 
-public interface SagaStep {
+public interface SagaStepInterface {
 
     public boolean execute(SagaContext context);
 

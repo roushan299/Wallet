@@ -4,7 +4,7 @@ import com.example.wallet.entity.SagaInstance;
 
 public interface SagaOrchestrator {
 
-    Long startSaga(SagaContext sagaContext);
+    Long startSaga(SagaContext context);
 
     boolean executeStep(Long sagaInstanceId, String stepName);
 

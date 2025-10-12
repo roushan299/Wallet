@@ -19,7 +19,7 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
     @Query("Select t from Transaction t where t.fromWalletId = :walletId or t.toWalletId = :walletId")
     List<Transaction> findByWalletId(@Param("walletId") Long walletId); // all the transaction of a wallet
 
-    List<Transaction> finByStatus(TransactionStatus status);
+    List<Transaction> findByStatus(TransactionStatus status);
 
     List<Transaction> findBySagaInstanceId(Long sagaInstanceId);
 

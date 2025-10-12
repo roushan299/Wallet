@@ -4,7 +4,7 @@ import com.example.wallet.entity.Transaction;
 import com.example.wallet.enums.TransactionStatus;
 import com.example.wallet.repository.TransactionRepository;
 import com.example.wallet.service.saga.SagaContext;
-import com.example.wallet.service.saga.SagaStep;
+import com.example.wallet.service.saga.SagaStepInterface;
 import lombok.extern.slf4j.Slf4j;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class UpdateTransactionStatus implements SagaStep {
+public class UpdateTransactionStatus implements SagaStepInterface {
 
     private final TransactionRepository transactionRepository;
 
@@ -51,6 +51,6 @@ public class UpdateTransactionStatus implements SagaStep {
 
     @Override
     public String getStepName() {
-        return "UpdateTransactionStatus";
+        return SagaStepFactory.SagaStepType.UPDATE_TRANSACTION_STATUS_STEP.toString();
     }
 }

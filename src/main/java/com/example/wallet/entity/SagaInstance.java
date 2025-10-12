@@ -24,13 +24,13 @@ public class SagaInstance {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
-    private SagaStatus sagaStatus = SagaStatus.STARTED;
+    private SagaStatus status = SagaStatus.STARTED;
 
     @Type(JsonType.class)
     @Column(name = "context", columnDefinition = "json")
     private String context;
 
-    @Column(name = "current_step", nullable = false)
+    @Column(name = "current_step", nullable = true)
     private String currentStep;
 
 }
