@@ -43,8 +43,8 @@ rules:
         keyGenerateStrategy:
           column: id
           keyGeneratorName: snowflakestrategy
-      sage_instance:
-        actualDataNodes: shardwallet${1..2}.sage_instance
+      saga_instance:
+        actualDataNodes: shardwallet${1..2}.saga_instance
         databaseStrategy:
           standard:
             shardingColumn: id
@@ -52,8 +52,8 @@ rules:
         keyGenerateStrategy:
           column: id
           keyGeneratorName: snowflakestrategy
-      sage_step:
-        actualDataNodes: shardwallet${1..2}.sage_step
+      saga_steps:
+        actualDataNodes: shardwallet${1..2}.saga_steps
         databaseStrategy:
           standard:
             shardingColumn: id
